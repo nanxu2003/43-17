@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉森甄网络科技有限公司 | 专业网络运营与运维解决方案</title>
+    <meta name="description" content="武汉森甄网络科技有限公司致力于为企业提供卓越的网络运营、服务器运维及数字化安全服务。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#06b6d4', // 青色
+                            secondary: '#3b82f6', // 蓝色
+                            accent: '#f59e0b',
+                            surface: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4; 
+        }
+        
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://picsum.photos/id/2/1920/1080'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.15), 0 10px 10px -5px rgba(6, 182, 212, 0.1);
+        }
+        
+        /* 渐变文字 */
+        .text-gradient {
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-300 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-network-wired text-brand-primary text-2xl"></i>
+                    <span class="font-bold text-xl text-white tracking-wider">武汉森甄 WH SENZHEN</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-brand-primary text-white px-3 py-2 rounded-md text-sm font-medium transition">首页</a>
+                        <a href="#services" class="hover:text-brand-primary text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition">核心服务</a>
+                        <a href="#solutions" class="hover:text-brand-primary text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition">解决方案</a>
+                        <a href="#about" class="hover:text-brand-primary text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition">关于我们</a>
+                        <a href="#contact" class="bg-brand-primary text-brand-dark px-4 py-2 rounded-full text-sm font-bold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">联系我们</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg h-screen flex items-center relative">
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-dark to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+            <div class="text-center md:text-left md:max-w-3xl">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-primary uppercase bg-cyan-900/30 rounded-full border border-cyan-800" data-aos="fade-down">
+                    专业 · 高效 · 安全
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                    数字化时代的 <br>
+                    <span class="text-gradient">坚实运维守护者</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                    武汉森甄网络科技有限公司专注于企业级网络运营与深度运维。我们以当地为中心，辐射周边，为您的数字资产提供全天候的稳定保障与性能优化。
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contact" class="px-8 py-4 bg-brand-primary text-brand-dark font-bold rounded-lg hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/30 flex items-center justify-center gap-2">
+                        立即咨询 <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="px-8 py-4 border border-slate-600 text-white font-medium rounded-lg hover:bg-slate-800 transition flex items-center justify-center">
+                        了解服务
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4" data-aos="fade-up">为什么选择我们？</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+                在这个万物互联的时代，网络稳定性就是企业的生命线。我们不仅仅是维修工，更是您网络架构的规划师与守护者。
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-brand-surface border-y border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="zoom-in">
+                    <div class="text-4xl font-bold text-brand-primary mb-2">99.9%</div>
+                    <div class="text-sm text-slate-400">服务在线率</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-brand-secondary mb-2">24/7</div>
+                    <div class="text-sm text-slate-400">全天候响应</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-white mb-2">500+</div>
+                    <div class="text-sm text-slate-400">故障完美排查</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-brand-accent mb-2">100%</div>
+                    <div class="text-sm text-slate-400">客户满意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-brand-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-primary font-semibold tracking-wide uppercase text-sm mb-2">Service Matrix</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">核心业务体系</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-700 card-hover transition-all duration-300" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <i class="fa-solid fa-server text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">服务器运维</h4>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        提供Linux/Windows服务器环境部署、性能调优、日志分析及故障预警。确保您的后端核心稳如磐石。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>负载均衡配置</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>自动化脚本部署</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-700 card-hover transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 text-cyan-400">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">网络安全防御</h4>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        构建多维度的安全防御体系，包括防火墙策略、DDOS防护、数据加密及漏洞扫描修复服务。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>定期渗透测试</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>数据异地灾备</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-700 card-hover transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-purple-900/50 rounded-lg flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fa-solid fa-cloud text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">云资源管理</h4>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        协助企业进行云迁移（主流云平台），优化云资源成本，配置CDN加速与对象存储。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>混合云架构设计</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>成本审计与优化</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">不仅是修复，更是<span class="text-brand-primary">预防</span></h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    传统的运维是被动响应，而我们推崇“主动式运维”。通过部署实时监控探针，我们能在故障发生前识别异常流量和硬件瓶颈。
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/50 mt-1">
+                            <i class="fa-solid fa-bolt text-green-500 text-xs"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h5 class="text-lg font-medium text-white">毫秒级报警</h5>
+                            <p class="text-slate-500 text-sm">一旦指标异常，系统自动触发短信与邮件通知。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/50 mt-1">
+                            <i class="fa-solid fa-chart-line text-blue-500 text-xs"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h5 class="text-lg font-medium text-white">可视化大屏</h5>
+                            <p class="text-slate-500 text-sm">为您定制数据看板，流量、CPU、内存一目了然。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="fade-left">
+                <div class="absolute inset-0 bg-brand-primary blur-3xl opacity-20"></div>
+                <img src="https://picsum.photos/id/60/600/400" alt="监控中心" class="relative rounded-lg shadow-2xl border border-slate-700 w-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">本地化服务，<span class="text-brand-secondary">快速触达</span></h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    立足当地，我们深知本地企业的痛点。无论是远程协助还是必要的现场支持，我们都能提供最迅速的响应机制。
+                </p>
+                <p class="text-slate-400 mb-6">
+                    我们的团队熟悉各种复杂的办公与机房环境，足迹遍布城市的核心商业区。
+                </p>
+                <a href="#contact" class="text-brand-primary font-bold hover:text-cyan-300 transition group">
+                    查看我们的服务范围 <i class="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="fade-right">
+                <img src="https://picsum.photos/id/180/600/400" alt="本地办公环境" class="relative rounded-lg shadow-2xl border border-slate-700 w-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white">标准化作业流程</h3>
+                <p class="text-slate-400 mt-2">SOP (Standard Operating Procedure)</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-700 -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <div class="bg-brand-dark p-6 text-center group" data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-16 h-16 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 group-hover:border-brand-primary group-hover:bg-cyan-900/20 transition-all duration-300 mb-4">
+                            <span class="text-2xl font-bold text-slate-400 group-hover:text-brand-primary">01</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">需求诊断</h4>
+                        <p class="text-sm text-slate-500">深度调研网络现状与业务痛点。</p>
+                    </div>
+
+                    <div class="bg-brand-dark p-6 text-center group" data-aos="fade-up" data-aos-delay="150">
+                        <div class="w-16 h-16 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 group-hover:border-brand-primary group-hover:bg-cyan-900/20 transition-all duration-300 mb-4">
+                            <span class="text-2xl font-bold text-slate-400 group-hover:text-brand-primary">02</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">方案定制</h4>
+                        <p class="text-sm text-slate-500">出具详细的运维或整改执行方案。</p>
+                    </div>
+
+                    <div class="bg-brand-dark p-6 text-center group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 group-hover:border-brand-primary group-hover:bg-cyan-900/20 transition-all duration-300 mb-4">
+                            <span class="text-2xl font-bold text-slate-400 group-hover:text-brand-primary">03</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">部署实施</h4>
+                        <p class="text-sm text-slate-500">专业工程师进场操作，全程无感切换。</p>
+                    </div>
+
+                    <div class="bg-brand-dark p-6 text-center group" data-aos="fade-up" data-aos-delay="450">
+                        <div class="w-16 h-16 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-600 group-hover:border-brand-primary group-hover:bg-cyan-900/20 transition-all duration-300 mb-4">
+                            <span class="text-2xl font-bold text-slate-400 group-hover:text-brand-primary">04</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">持续维保</h4>
+                        <p class="text-sm text-slate-500">7x24小时巡检与应急响应支持。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-slate-500 text-sm mb-8 uppercase tracking-widest">Powered By Technology</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fa-brands fa-linux text-4xl text-white hover:text-yellow-400 transition"></i>
+                <i class="fa-brands fa-aws text-4xl text-white hover:text-orange-500 transition"></i>
+                <i class="fa-brands fa-docker text-4xl text-white hover:text-blue-500 transition"></i>
+                <i class="fa-brands fa-python text-4xl text-white hover:text-yellow-300 transition"></i>
+                <i class="fa-brands fa-cloudflare text-4xl text-white hover:text-orange-400 transition"></i>
+                <i class="fa-solid fa-database text-4xl text-white hover:text-green-400 transition"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white">灵活的服务模式</h3>
+                <p class="text-slate-400 mt-2">按需选择，成本可控</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-dark p-8 rounded-xl border border-slate-700 hover:border-brand-primary transition-colors duration-300" data-aos="flip-left">
+                    <h4 class="text-xl font-bold text-white">基础运维</h4>
+                    <div class="my-4 text-3xl font-bold text-slate-300">¥ 1,288 <span class="text-sm font-normal">/月起</span></div>
+                    <p class="text-slate-500 text-sm mb-6">适合初创型企业的小规模部署。</p>
+                    <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>5台服务器以内</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>工作日 9:00-18:00 响应</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>基础环境搭建</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-2 border border-slate-600 text-center rounded text-white hover:bg-slate-700 transition">咨询报价</a>
+                </div>
+
+                <div class="bg-brand-dark p-8 rounded-xl border-2 border-brand-primary relative transform md:-translate-y-4 shadow-2xl shadow-cyan-900/20" data-aos="flip-left" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 bg-brand-primary text-brand-dark text-xs font-bold px-3 py-1 rounded-bl-lg">推荐</div>
+                    <h4 class="text-xl font-bold text-white">高级管家</h4>
+                    <div class="my-4 text-3xl font-bold text-brand-primary">¥ 3,999 <span class="text-sm font-normal text-slate-300">/月起</span></div>
+                    <p class="text-slate-500 text-sm mb-6">适合业务增长期，需要高稳定性的企业。</p>
+                    <ul class="space-y-3 mb-8 text-slate-300 text-sm">
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>20台服务器以内</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>7x24小时 紧急响应</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>自动化监控报警</li>
+                        <li><i class="fa-solid fa-check text-brand-primary mr-2"></i>月度运维报告</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-2 bg-brand-primary text-brand-dark font-bold text-center rounded hover:bg-cyan-400 transition">立即选择</a>
+                </div>
+
+                <div class="bg-brand-dark p-8 rounded-xl border border-slate-700 hover:border-brand-primary transition-colors duration-300" data-aos="flip-left" data-aos-delay="200">
+                    <h4 class="text-xl font-bold text-white">企业定制</h4>
+                    <div class="my-4 text-3xl font-bold text-slate-300">面议</div>
+                    <p class="text-slate-500 text-sm mb-6">针对复杂架构的大型集群与混合云环境。</p>
+                    <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>无限节点支持</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>专属运维团队 (3人+)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>架构优化与重构</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-2 border border-slate-600 text-center rounded text-white hover:bg-slate-700 transition">联系专家</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-white text-center mb-12">客户的声音</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 p-8 rounded-lg relative" data-aos="fade-up">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-primary/20 absolute top-4 left-4"></i>
+                    <p class="text-slate-300 italic mb-6 relative z-10">"自从将服务器运维交给贵司后，我们的电商平台再也没有出现过宕机情况。特别是双十一期间，他们的响应速度让人非常安心。"</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1005/50/50" class="w-12 h-12 rounded-full mr-4" alt="Client">
+                        <div>
+                            <div class="text-white font-bold">李经理</div>
+                            <div class="text-sm text-slate-500">某电商平台 CTO</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-lg relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-primary/20 absolute top-4 left-4"></i>
+                    <p class="text-slate-300 italic mb-6 relative z-10">"非常专业的团队，不仅解决了我们的网络安全漏洞，还帮我们优化了云资源配置，每年节省了30%的IT成本。"</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1027/50/50" class="w-12 h-12 rounded-full mr-4" alt="Client">
+                        <div>
+                            <div class="text-white font-bold">王总</div>
+                            <div class="text-sm text-slate-500">当地某物流企业负责人</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-white text-center mb-12">常见问题</h3>
+            <div class="space-y-4">
+                <details class="bg-brand-dark rounded-lg p-4 group cursor-pointer border border-slate-700">
+                    <summary class="font-semibold text-white flex justify-between items-center">
+                        你们的服务范围仅限当地吗？
+                        <i class="fa-solid fa-chevron-down text-brand-primary transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">虽然我们的总部位于当地，但依托远程运维技术，我们可以服务全国各地的客户。对于当地的客户，我们还可以提供现场驻点或紧急上门服务。</p>
+                </details>
+                
+                <details class="bg-brand-dark rounded-lg p-4 group cursor-pointer border border-slate-700">
+                    <summary class="font-semibold text-white flex justify-between items-center">
+                        如果半夜服务器出故障怎么办？
+                        <i class="fa-solid fa-chevron-down text-brand-primary transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">我们的高级套餐包含 7x24 小时应急响应服务。无论何时，只要监控系统触发严重警报，我们的值班工程师会在15分钟内介入处理。</p>
+                </details>
+
+                <details class="bg-brand-dark rounded-lg p-4 group cursor-pointer border border-slate-700">
+                    <summary class="font-semibold text-white flex justify-between items-center">
+                        你们支持哪些云平台？
+                        <i class="fa-solid fa-chevron-down text-brand-primary transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm leading-relaxed">我们精通主流公有云平台。同时也支持私有云和IDC机房的物理服务器运维。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h3 class="text-3xl font-bold text-white">最新动态</h3>
+                    <p class="text-slate-400 mt-2">技术前沿与公司新闻</p>
+                </div>
+                <a href="#" class="text-brand-primary text-sm font-semibold hover:text-white transition">查看更多</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48">
+                        <img src="https://picsum.photos/id/1/600/400" alt="Blog" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="text-xs text-brand-primary mb-2">2023-10-15</div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-primary transition">如何防范勒索病毒对企业数据的威胁？</h4>
+                    <p class="text-slate-500 text-sm line-clamp-2">勒索病毒日益猖獗，本文将从备份策略、权限管理和网络隔离三个方面...</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48">
+                        <img src="https://picsum.photos/id/3/600/400" alt="Blog" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="text-xs text-brand-primary mb-2">2023-09-22</div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-primary transition">Docker容器化部署的最佳实践</h4>
+                    <p class="text-slate-500 text-sm line-clamp-2">容器化已成为主流，如何编写高效的Dockerfile并管理容器编排是每个运维...</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48">
+                        <img src="https://picsum.photos/id/6/600/400" alt="Blog" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="text-xs text-brand-primary mb-2">2023-08-10</div>
+                    <h4 class="text-lg font-bold text-white mb-2 group-hover:text-brand-primary transition">我们助力本地企业完成云迁移</h4>
+                    <p class="text-slate-500 text-sm line-clamp-2">热烈庆祝我司成功协助当地某制造企业完成ERP系统的云端无缝迁移。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative bg-brand-primary overflow-hidden">
+        <div class="absolute inset-0 bg-brand-dark opacity-10 pattern-dots"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">准备好升级您的网络架构了吗？</h2>
+            <p class="text-brand-dark/80 text-lg mb-8 font-medium">不管是日常运维还是紧急救援，我们随时待命。现在联系，获取免费的初步网络诊断报告。</p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-brand-dark text-white font-bold rounded-full shadow-xl hover:scale-105 transition-transform">
+                开始合作
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-white mb-2">联系我们</h3>
+                    <p class="text-slate-400 mb-8">我们期待听到您的声音，为您提供最专业的建议。</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-brand-surface rounded-lg flex items-center justify-center text-brand-primary shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">公司地址</h5>
+                                <p class="text-slate-400 text-sm mt-1">湖北省武汉市洪山区洪山街道文化大道555号融科智谷工业项目（二期）B1、B2、B3栋B1号楼13层04号</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-brand-surface rounded-lg flex items-center justify-center text-brand-primary shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">电子邮箱</h5>
+                                <p class="text-slate-400 text-sm mt-1">contact@whsenzhen.asia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-brand-surface rounded-lg flex items-center justify-center text-brand-primary shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-white font-bold">联系电话</h5>
+                                <p class="text-slate-400 text-sm mt-1">13833025021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 w-full h-48 bg-brand-surface rounded-xl overflow-hidden border border-slate-700 relative flex items-center justify-center group">
+                        <div class="absolute inset-0 bg-[url('https://picsum.photos/id/10/600/400')] bg-cover opacity-50 grayscale group-hover:grayscale-0 transition duration-500"></div>
+                        <div class="relative z-10 bg-brand-dark/80 px-4 py-2 rounded text-white text-xs">
+                            <i class="fa-solid fa-map-pin mr-1 text-brand-primary"></i> 当地
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-surface p-8 rounded-2xl border border-slate-700" data-aos="fade-left">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快联系您！');">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-slate-400 text-sm mb-2">姓名</label>
+                                <input type="text" class="w-full bg-brand-dark border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="您的称呼">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-sm mb-2">电话</label>
+                                <input type="tel" class="w-full bg-brand-dark border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="联系方式">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-slate-400 text-sm mb-2">邮箱</label>
+                            <input type="email" class="w-full bg-brand-dark border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="name@company.com">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-slate-400 text-sm mb-2">服务类型</label>
+                            <select class="w-full bg-brand-dark border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition">
+                                <option>服务器运维</option>
+                                <option>网络安全</option>
+                                <option>云迁移/管理</option>
+                                <option>其他咨询</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-slate-400 text-sm mb-2">需求描述</label>
+                            <textarea class="w-full bg-brand-dark border border-slate-600 rounded-lg px-4 py-3 text-white h-32 focus:outline-none focus:border-brand-primary transition" placeholder="请简述您遇到的问题或需求..."></textarea>
+                        </div>
+                        <button class="w-full bg-brand-primary text-brand-dark font-bold py-4 rounded-lg hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#020617] border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">武汉森甄 WH SENZHEN</span>
+                        </div>
+                        <span class="font-bold text-lg text-white">武汉森甄网络科技有限公司</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        专注为您构建安全、稳定、高效的网络环境。做您身边最值得信赖的运维专家。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-weixin"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-weibo"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#home" class="hover:text-brand-primary transition">首页</a></li>
+                        <li><a href="#about" class="hover:text-brand-primary transition">关于我们</a></li>
+                        <li><a href="#services" class="hover:text-brand-primary transition">服务项目</a></li>
+                        <li><a href="#contact" class="hover:text-brand-primary transition">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">服务支持</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-primary transition">运维SLA协议</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">隐私政策</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">服务条款</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">帮助中心</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">订阅更新</h4>
+                    <p class="text-slate-500 text-sm mb-4">订阅我们的通讯，获取最新网络安全警报。</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email" class="bg-slate-900 border border-slate-700 text-white px-3 py-2 rounded-l text-sm w-full focus:outline-none">
+                        <button class="bg-brand-primary text-brand-dark px-4 py-2 rounded-r font-bold text-sm hover:bg-cyan-400 transition">Go</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-600 text-sm text-center md:text-left">
+                    &copy; 2023 武汉森甄网络科技有限公司 All Rights Reserved.
+                </p>
+                <p class="text-slate-700 text-xs mt-2 md:mt-0">
+                    Design by 武汉森甄 WH SENZHEN
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.style.background = 'rgba(15, 23, 42, 0.85)';
+            }
+        });
+
+        // Mobile Menu Logic (Simplified)
+        const btn = document.querySelector('button.inline-flex');
+        // Note: For a full production site, you'd add the menu DOM manipulation here.
+        // This is kept simple for the single file requirement.
+        btn.addEventListener('click', () => {
+             alert("移动端菜单已触发 (请在完整版中添加下拉逻辑)");
+        });
+    </script>
+</body>
+</html>
